@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg" id="bg"></div>
+  <header class="top">
+    <h1 class="brand">Focus Clock</h1>
+    <p class="quote">"Small steps, steady focus"</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="clock">Clock</button>
+    <button class="tab" data-tab="stopwatch">Stopwatch</button>
+    <button class="tab" data-tab="timer">Timer</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="clock">
+      <div class="display" id="clockTime">00:00:00</div>
+      <p class="sub" id="clockDate"></p>
+    </section>
+
+    <section class="panel" id="stopwatch">
+      <div class="display" id="swTime">00:00.00</div>
+      <div class="controls">
+        <button class="btn primary" id="swStart">Start</button>
+        <button class="btn" id="swLap">Lap</button>
+        <button class="btn" id="swReset">Reset</button>
+      </div>
+      <ol class="laps" id="laps"></ol>
+    </section>
+
+    <section class="panel" id="timer">
+      <div class="inputs">
+        <input type="number" id="tMin" min="0" max="99" value="5" aria-label="Minutes">
+        <span>:</span>
+        <input type="number" id="tSec" min="0" max="59" value="0" aria-label="Seconds">
+      </div>
+      <div class="display" id="tDisplay">05:00</div>
+      <div class="controls">
+        <button class="btn primary" id="tStart">Start</button>
+        <button class="btn" id="tReset">Reset</button>
+      </div>
+    </section>
+  </main>
+
+  <button class="bg-btn" id="bgBtn" type="button">Change background</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
